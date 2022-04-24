@@ -1,0 +1,13 @@
+function afm_add_scripts_footer() {
+?>
+  <script>
+    jQuery(document).ready(function(){
+      jQuery('.woocommerce ul.products .product').each(function(){
+        var getWishlist = jQuery(this).find('.tinv-wraper');
+        jQuery(this).find('.btn-wrap').append(getWishlist);
+      }); 
+    });
+  </script>
+<?php
+}
+add_action('wp_footer', 'afm_add_scripts_footer');
